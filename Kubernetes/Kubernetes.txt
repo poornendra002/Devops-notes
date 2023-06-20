@@ -748,7 +748,20 @@ Liveness probe
 	- liveness probe is used to check application inside container is healthy and if not healthy the it 
 	   marks container to be restarted by kubelet.
  
-Readiness probe 
+Readiness Probe 
+	- ReadinessProbe is used to determine that a application running inside a 
+	  container is in a state to accept the traffic.
+        - When this probe is successful, the traffic from the loadbalancer is allowed 
+	  to the application inside the conatiner.
+	- When this probe is fails, the traffic from the loadbalancer is halted
+	  to the application inside the conatiner.
+	readinessProbe: 
+		tcpSocket: 
+			port: 8080
+		initialDelaySeconds: 15
+		periodSeconds: 10
+		
+Startup Probe 
 	- This probe will run at the initial start of the container.
 	- This probe allows us to give maximum startup time for application before 
 	  running livenessProbe or readinessprobe.
@@ -758,8 +771,7 @@ Readiness probe
 		   path: /healtz
 		   port: 8080
 		initialDelaySeconds: 3
-	    periodSeconds: 3           
-
+	    periodSeconds: 3   
 
 RBAC (Role-Based Access Control)
 	- types of accounts 
