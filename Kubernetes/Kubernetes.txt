@@ -637,7 +637,7 @@ Persistent Volume (pv)
 
 Persistent Volume Claim (pvc)
 	- This is the amount of memory needed to claim in any pod based on the access modes.
-	- After we create pic, k8s looks for a Persistent Volume which matches the claim same configuration.
+	- After we create pvc, k8s looks for a Persistent Volume which matches the claim same configuration.
 	- If Persistent Volume is found with same configuration, it binds the cliam to the pod as volume. 
 
 Assignment: 
