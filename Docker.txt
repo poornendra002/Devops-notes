@@ -38,7 +38,7 @@ Virtualization (VM)
 	- VM is way of running virtual OS on top a host OS using a special software called Hypervisor.
 	- VM directly shares the hardware of the host OS. 
 
-					VM 					vs 			Containerisation 
+	             VM 			vs 		Containerisation 
 	1. Virtualization at hardware level  		1. Virtualization at OS level 
 	2. Heavyweight - consume more host 		2. Lightweight
 	   resources 	
